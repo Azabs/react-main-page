@@ -18,10 +18,7 @@ const NavBar = (props) => {
         <span className="navbar-toggler-icon"></span>
       </button>
 
-      <div
-        className="collapse navbar-collapse show"
-        id="navbarSupportedContent"
-      >
+      <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
           {props.links.map((l) => (
             <li key={l.name} className={"nav-item"}>
