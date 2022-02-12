@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 
 class Content extends Component {
-  state = {};
-
   renderContent = () => {
     const text = (
       <div className="col-md-7 px-4 m-auto">
@@ -11,7 +9,7 @@ class Content extends Component {
       </div>
     );
     const img = (
-      <div className="col-md-5">
+      <div className="col-md-5 p-0">
         <img
           src={this.props.image.src}
           alt={this.props.image.name}
@@ -38,7 +36,7 @@ class Content extends Component {
 
   render() {
     return (
-      <div className="row content text-light text-center bg-dark mb-3">
+      <div className="row text-light text-center bg-dark my-4">
         {this.renderContent()}
       </div>
     );

@@ -1,12 +1,19 @@
 body {
-  background-color: #292b2c;
+  background-color: #111111;
+  color: white;
 }
 
 /*Carousel*/
+.carousel-item {
+  min-height: 50vw;
+}
+
 .carousel-bg {
   position: fixed;
   opacity: 50%;
   width: 100%;
+  top: -25%;
+  left: 0;
   z-index: -100;
 }
 /*--------*/
@@ -42,4 +49,7 @@ body {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  .carousel-item {
+    min-height: 500px;
+  }
 }

@@ -1,18 +1,17 @@
 import React, { Component } from "react";
 
 class Carousel extends Component {
-  state = {};
-
   renderCarousel = () => {
     let active = true;
-    let imgArray = this.props.images.map((i) => (
+    let imgArray = this.props.carousel.map((c) => (
       <div
         className={
           "carousel-item " + (active ? ((active = false), "active") : "")
         }
-        key={i.name}
+        key={c.image.name}
       >
-        <img src={i.src} className="d-block w-100" alt={i.name} />
+        <img src={c.image.src} alt={c.image.name} className="carousel-bg" />
+        <p className="text-center align-self-center">{c.text}</p>
       </div>
     ));
 
