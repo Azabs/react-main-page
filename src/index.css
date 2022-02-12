@@ -4,8 +4,16 @@ body {
 }
 
 /*Carousel*/
+.carousel {
+  background-color: #101010;
+}
+
 .carousel-item {
   min-height: 50vw;
+}
+
+.carousel-content {
+  padding: 0 10%;
 }
 
 .carousel-bg {
@@ -37,18 +45,39 @@ body {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+  .carousel-content {
+    position: absolute;
+    left: 0;
+    top: 25%;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+  .carousel-content {
+    top: 30%;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+  .carousel-content {
+    font-size: larger;
+    top: 40%;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  .carousel-content {
+    max-width: 75%;
+    left: 13%;
+  }
+
+  .carousel-bg {
+    top: -75%;
+  }
+
   .carousel-item {
     min-height: 500px;
   }

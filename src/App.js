@@ -13,18 +13,35 @@ class App extends Component {
       { name: "Disabled", url: "#", class: "disabled" },
     ],
     carousel: [
-      { text: "First", image: { name: "building", src: "./img/building.jpg" } },
-      { text: "Second", image: { name: "swan", src: "./img/swan.jpg" } },
-      { text: "Third", image: { name: "road", src: "./img/road.jpg" } },
+      {
+        content: {
+          title: "First",
+          text: "Autem corrupti et delectus doloribus voluptatem et qui. Ut amet quos et voluptatem quidem doloremque itaque. Asperiores assumenda asperiores iusto. Dicta quis eos dolorem. Dolor assumenda dolorem debitis ut quae.",
+        },
+        image: { name: "building", src: "./img/building.jpg" },
+      },
+      {
+        content: {
+          title: "Second",
+          text: "Curabitur vitae blandit enim. Curabitur dictum a mauris et porttitor. Nullam pulvinar eros vitae blandit tempus. Vestibulum risus massa, pellentesque non dolor id, accumsan elementum urna. Pellentesque in euismod arcu.",
+        },
+        image: { name: "swan", src: "./img/swan.jpg" },
+      },
+      {
+        content: {
+          title: "Third",
+          text: "Donec ac feugiat orci. Morbi elementum eget ex ut vulputate. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla nec dignissim metus. Suspendisse accumsan risus sem.",
+        },
+        image: { name: "clouds", src: "./img/clouds.jpg" },
+      },
     ],
   };
   render() {
     return (
       <React.Fragment>
         <NavBar links={this.state.navLinks} />
-
+        <Carousel id="main-carousel" carousel={this.state.carousel} />
         <div className="container">
-          <Carousel id="main-carousel" carousel={this.state.carousel} />
           <div className="row justify-content-center my-3">
             <Heading
               title="First Heading"
@@ -33,7 +50,7 @@ class App extends Component {
               veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
               commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
               velit esse cillum dolore eu fugiat nulla pariatur."
-              image={this.state.carousel[0].image}
+              image={{ name: "bird", src: "./img/bird.jpg" }}
             />
             <Heading
               title="Second Heading"
@@ -42,7 +59,7 @@ class App extends Component {
               veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
               commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
               velit esse cillum dolore eu fugiat nulla pariatur."
-              image={this.state.carousel[1].image}
+              image={{ name: "city", src: "./img/city.jpg" }}
             />
             <Heading
               title="Third Heading"
@@ -51,7 +68,7 @@ class App extends Component {
               veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
               commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
               velit esse cillum dolore eu fugiat nulla pariatur."
-              image={this.state.carousel[2].image}
+              image={{ name: "woman", src: "./img/woman.jpg" }}
             />
           </div>
           <Content
@@ -65,7 +82,7 @@ class App extends Component {
                   amet nulla. Mattis vulputate enim nulla aliquet porttitor lacus
                   luctus accumsan tortor."
             imgAfter="true"
-            image={this.state.carousel[2].image}
+            image={{ name: "chair", src: "./img/chair.jpg" }}
           />
           <Content
             title="This wrapper has an image before the text"
@@ -78,7 +95,7 @@ class App extends Component {
                   amet nulla. Mattis vulputate enim nulla aliquet porttitor lacus
                   luctus accumsan tortor."
             imgAfter="false"
-            image={this.state.carousel[1].image}
+            image={{ name: "cat", src: "./img/cat.jpg" }}
           />
           <Content
             title="This one has an image after the text"
@@ -91,7 +108,7 @@ class App extends Component {
                   amet nulla. Mattis vulputate enim nulla aliquet porttitor lacus
                   luctus accumsan tortor."
             imgAfter="true"
-            image={this.state.carousel[0].image}
+            image={{ name: "flower", src: "./img/flower.jpg" }}
           />
         </div>
         <Footer />

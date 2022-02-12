@@ -6,12 +6,18 @@ class Carousel extends Component {
     let imgArray = this.props.carousel.map((c) => (
       <div
         className={
-          "carousel-item " + (active ? ((active = false), "active") : "")
+          "text-center carousel-item " +
+          (active ? ((active = false), "active") : "")
         }
         key={c.image.name}
       >
-        <img src={c.image.src} alt={c.image.name} className="carousel-bg" />
-        <p className="text-center align-self-center">{c.text}</p>
+        <div className="container">
+          <img src={c.image.src} alt={c.image.name} className="carousel-bg" />
+          <div className="carousel-content">
+            <h2>{c.content.title}</h2>
+            <p>{c.content.text}</p>
+          </div>
+        </div>
       </div>
     ));
 
